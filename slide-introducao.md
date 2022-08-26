@@ -96,13 +96,13 @@ Softwares normalmente não são testados contra vulnerabilidades de segurança d
 - Shrink-wrap code:\
 Muitos softwares de prateleira vêm com características extras que o usuário final não conhece e essas podem ser usadas por haceers. Um exemplo é o Microsoft Word que permite que haceers executem programas através de macros;
 
--Má configuração:\
+- Má configuração:\
 Sistemas também podem ser configurados erroneamente ou deixados com baixo nível de segurança, para facilitar seu uso. Contudo isso resulta em vulnerabilidades que podem ser exploradas durante ataques
 
 ## Fases/passos de hacking
 
-1. Reconhecendo
-    pesquisas.\
+1. Reconhecendo\
+    pesquisas: recolhe infos na internet sobre a instituição/pessoa\
     passivo:\ 
     obter infos sem que o alvo tome conhecimento. Exemplo: observar o habito de funcionários em uma empresa alvo
     
@@ -114,26 +114,33 @@ Sistemas também podem ser configurados erroneamente ou deixados com baixo níve
     
     
 2.  Escaneamento
-    Fazer uma análise mais profunda do alvo utilizando as informações obtidas na fase anterior
+    Fazer uma análise mais profunda do alvo utilizando as informações obtidas na fase anterior\
+    mais técnica que a anterior\
 
     fase consiste em uma análise mais profunda e detalhada das tecnologias e vulnerabilidades da vítima.\
     
     Ferramentas:
     - Discadores (dialers);
     - Escâneres de portas;
-    - Mapeamento de rede;
+    - Mapeamento de rede (descobrir maquinas que existem na rede);
     - Varredores (sweepers);
     - Escâneres de vulnerabilidades.
 
 \
     Procura de qualquer info que possa ajudar a realizar o ataque (como nomes, computadores, ips, contas de usuarios)\
-Por exemplo, a fase de reconhecimento pode ter mostrado que a rede alvo tem 500 computadores conectados em uma subrede dentro de um prédio. Já a presente fase pode trazer informações que algumas dessas máquinas possuem o sistema operacional Windows e que outras executam FTP.
+Por exemplo, a fase de reconhecimento pode ter mostrado que a rede alvo tem 500 computadores conectados em uma subrede dentro de um prédio. Já a presente fase pode trazer informações que algumas dessas máquinas possuem o sistema operacional Windows e que outras executam FTP.\
+
+passivo: não tem interação, só observa\
+ativo: tem interação, 'testa se a porta (da casa) ta aberta'\
+
+invasões offline/localmente no computador são as mais devastadoras
 
 
 4. Mantendo acesso
 provável que o hacker queira manter o acesso para realizar ações futuras\
 A manutenção do acesso é normalmente realizada através de backdoors, rootkits e trojans\
 Alguns hackers chegam ao ponto de melhorar o nível de segurança da máquina invadida para ter exclusividade (evitar outros haceers).
+
 
 5. Cobrindo os rastros
 Com a máquina já comprometida, o último passo é apagar todos os indícios que denunciem a invasão. Isso também impede alguma ação legal por parte da vítima. Apagar as pistas de uma ciber invasão signifca:
