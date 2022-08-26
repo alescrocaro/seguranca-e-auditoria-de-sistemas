@@ -150,3 +150,49 @@ Com a máquina já comprometida, o último passo é apagar todos os indícios qu
 
 Outro exemplo é quando o hacker utiliza túneis criptográficos para impedir que um possível sistema de segurança compreenda a ação do haceer (comandos, arquivos, etc).
 
+
+## Hacktivismo
+Hoje, a ideia de grupos hackers é maior do que a de um individuo sozinho. (Anonymous)\
+
+Alvos dos hackers:
+- sites famosos
+- empresas de tecnologia
+- empresas de segurança
+- concorrentes
+- governo
+- vitimas aleatórias
+
+
+## Ataques a pessoas comuns
+
+Ataques de Hacker a pessoas comunsOs Hackers de verdade difcilmente vão querer invadir o computador de uma pessoa comum. Isto por que na verdade um ataque pode ser tedioso e caso o Hacker não tenha uma motivação ele não vai fazer o ataque só por fazer! Mas isto não se aplica aos não Hackers que atacam só por diversão. Então, ataques a pessoas comuns geralmente são ataques de:
+
+- Ataques a Privacidade: É o ataque mais comum ao usuário domestico. Já que como é da natureza humana, os atacantes tem compulsão em dar uma olhadinha na vida da vitima e nos dias atuais os computadores são pratos cheios para este propósito.
+- Destruição: Este tipo de ação pode ser considerada a mais destrutiva, pois pode destruir informações segundos, esses ataques podem ocorrer devido a vírus (o mais comum) e Craceers. O pior nestes casos é que usuários domésticos não têm o costume de fazer copias de segurança.
+- Obtenção de Vantagens: Para obter vantagens causando incidentes de segurança nos computadores pessoais, geralmente é necessário a utilização de técnicas no qual primeiro a vitima será exposta a ataques de privacidade ou destruição. As motivações deste tipo de ataque são tão distintas quanto seu próprio objetivo real.
+
+
+## Um pouco mais a respeito de ciberataques
+
+- passivos
+    - rouba os dados. tentam obter informações a respeito do sistema/rede, ou seja, não altera o estado da vítima. Assim, ataques passivos afetem contra a confdencialidade.
+- ativos
+    - rouba os dados e destroi outros. alteram o sistema ou rede que está sob ataque.
+
+# Vírus
+software cujo objetivo principal não é fazer maldade, mas reproduzir, até q em algum momento ele faz algo ruim.\
+Hoje em dia o vírus é discreto, para conseguir se proliferar mais/roubar dados\
+Mitigar: o virus pode ser amenizado, mas dificilmente 100% erradicado\
+
+WORM: não precisa ser iniciado, se prolifera sozinho\
+
+RANSOMWARE: qualquer virus/malware de sequestro de dados, feito por meio de criptografia, que usa como refém arquivos pessoais da própria vítima e cobra resgate para restabelecer o acesso a estes arquivos. 
+
+
+
+
+
+
+
+
+
