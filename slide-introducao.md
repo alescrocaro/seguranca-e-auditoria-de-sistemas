@@ -188,7 +188,15 @@ WORM: não precisa ser iniciado, se prolifera sozinho\
 
 RANSOMWARE: qualquer virus/malware de sequestro de dados, feito por meio de criptografia, que usa como refém arquivos pessoais da própria vítima e cobra resgate para restabelecer o acesso a estes arquivos. 
 
+# DoS
+ataque local, torna um serviço lento ou indisponivel\
+virus antigamente usava ideia de DoS, Exemplo: SO\
+um ataque vindo de varias maquinas pode ser um DoS\
 
+# DDoS
+Ataque vem de mais de uma fonte, via rede.\
+pode não ser um ataque massivo, da pra realizar ataques com 1, 2 ou 5 pacotes\
+um ataque vindo de apenas uma maquina não pode ser um DDoS\
 
 
 
