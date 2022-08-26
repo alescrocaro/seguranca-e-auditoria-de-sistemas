@@ -39,8 +39,10 @@ Isto pode ocorrer, por exemplo, por que perdemos a chave criptográfca ou a chav
 # outros elementos para manter a segurança de computadores
 ## Autenticidade:
 Impedir que pessoas não autorizadas tenham acesso aos recursos computacionais, ou seja, é necessário a identifcação dos elementos que compõem uma transação eletrônica;
-## Não-repúdio: Impedir a falsa negação de ações que alguém tenha realizado. O não repúdio pode ser entendido como sendo os esforços aplicados para garantir a autoria de determinadas ações;
-## Auditoria: É a identifcação de ações/eventos ocorridos no sistema. A auditoria é feita através de análise de registros que identifquem:●Ações realizadas; 
+## Não-repúdio: 
+Impedir a falsa negação de ações que alguém tenha realizado. O não repúdio pode ser entendido como sendo os esforços aplicados para garantir a autoria de determinadas ações;
+## Auditoria: 
+É a identifcação de ações/eventos ocorridos no sistema. A auditoria é feita através de análise de registros que identifquem:●Ações realizadas; 
 - Pessoas envolvidas;
 - Ativos utilizados; 
 - Operações realizadas; 
