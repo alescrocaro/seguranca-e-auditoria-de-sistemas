@@ -40,7 +40,9 @@ Isto pode ocorrer, por exemplo, por que perdemos a chave criptográfca ou a chav
 ## Autenticidade:
 Impedir que pessoas não autorizadas tenham acesso aos recursos computacionais, ou seja, é necessário a identifcação dos elementos que compõem uma transação eletrônica;
 ## Não-repúdio: 
-Impedir a falsa negação de ações que alguém tenha realizado. O não repúdio pode ser entendido como sendo os esforços aplicados para garantir a autoria de determinadas ações;
+Impedir a falsa negação de ações que alguém tenha realizado. O não repúdio pode ser entendido como sendo os esforços aplicados para garantir a autoria de determinadas ações;\
+visa garantir que o autor não negue ter criado e assinado o documento\
+exemplo de caixas eletronicos do banco com camera de segurança
 ## Auditoria: 
 É a identifcação de ações/eventos ocorridos no sistema. A auditoria é feita através de análise de registros que identifquem:●Ações realizadas; 
 - Pessoas envolvidas;
