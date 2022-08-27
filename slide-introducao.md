@@ -5,19 +5,19 @@
 - informações só ficam disponíveis para quem tem permissão
     
 ### Como fornecer?
-- criptografia
-   -  o mais simples é usuário com senha
+- **criptografia**
+- controle de acesso de usuario
 
 ## Disponibilidade
 ### O que é?
-- ato de ficar disponível ao ser requisitado
+- informação deve ficar disponível ao ser requisitada
 
 ### Como fornecer?
 - redundancia
   -   backup
   -   internet de empresas diferentes
   -   no break
-- ao subir dados na nuvem, a confidencialidade pode diminuir (exemplo do dropbox e o responsavel pelo servidor (do dropbox) talvez pode ter acesso a informações do servidor (lado humano - o responsavel pode n ser de boa indole))
+ao subir dados na nuvem, a confidencialidade pode diminuir (exemplo do dropbox e o responsavel pelo servidor (do dropbox) talvez pode ter acesso a informações do servidor (lado humano - o responsavel pode n ser de boa indole))
 
 ## Integridade
 ### O que é?
