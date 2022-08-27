@@ -16,7 +16,7 @@
 - redundancia
   -   backup
   -   internet de empresas diferentes
-  -   no break
+  -   no break\
 ao subir dados na nuvem, a confidencialidade pode diminuir (exemplo do dropbox e o responsavel pelo servidor (do dropbox) talvez pode ter acesso a informações do servidor (lado humano - o responsavel pode n ser de boa indole))
 
 ## Integridade
@@ -44,7 +44,8 @@ Impedir a falsa negação de ações que alguém tenha realizado. O não repúdi
 visa garantir que o autor não negue ter criado e assinado o documento\
 exemplo de caixas eletronicos do banco com camera de segurança
 ## Auditoria: 
-É a identifcação de ações/eventos ocorridos no sistema. A auditoria é feita através de análise de registros que identifquem:●Ações realizadas; 
+É a identifcação de ações/eventos ocorridos no sistema. A auditoria é feita através de análise de registros que identifquem:
+- Ações realizadas; 
 - Pessoas envolvidas;
 - Ativos utilizados; 
 - Operações realizadas; 
@@ -133,6 +134,15 @@ Por exemplo, a fase de reconhecimento pode ter mostrado que a rede alvo tem 500 
 passivo: não tem interação, só observa\
 ativo: tem interação, 'testa se a porta (da casa) ta aberta'\
 
+
+3. Ganhando acesso: 
+é onde a mágica acontece. Pois, é a fase na qual realmente o hacker invade a vítima. Para ganhar acesso o haceer utiliza as informações obtidas nas fases anteriores.\
+Os métodos de invasão podem ser:
+- Via Internet - WAN;
+- Rede local – LAN;
+- Localmente no computador;
+- offline
+
 invasões offline/localmente no computador são as mais devastadoras
 
 
@@ -164,8 +174,7 @@ Alvos dos hackers:
 
 
 ## Ataques a pessoas comuns
-
-Ataques de Hacker a pessoas comunsOs Hackers de verdade difcilmente vão querer invadir o computador de uma pessoa comum. Isto por que na verdade um ataque pode ser tedioso e caso o Hacker não tenha uma motivação ele não vai fazer o ataque só por fazer! Mas isto não se aplica aos não Hackers que atacam só por diversão. Então, ataques a pessoas comuns geralmente são ataques de:
+Os Hackers de verdade difcilmente vão querer invadir o computador de uma pessoa comum. Isto por que na verdade um ataque pode ser tedioso e caso o Hacker não tenha uma motivação ele não vai fazer o ataque só por fazer! Mas isto não se aplica aos não Hackers que atacam só por diversão. Então, ataques a pessoas comuns geralmente são ataques de:
 
 - Ataques a Privacidade: É o ataque mais comum ao usuário domestico. Já que como é da natureza humana, os atacantes tem compulsão em dar uma olhadinha na vida da vitima e nos dias atuais os computadores são pratos cheios para este propósito.
 - Destruição: Este tipo de ação pode ser considerada a mais destrutiva, pois pode destruir informações segundos, esses ataques podem ocorrer devido a vírus (o mais comum) e Craceers. O pior nestes casos é que usuários domésticos não têm o costume de fazer copias de segurança.
