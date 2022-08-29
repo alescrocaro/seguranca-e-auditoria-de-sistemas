@@ -60,11 +60,11 @@ firewall\
 São medidas aplicadas para evitar/prevenir a ocorrência de problemas de segurança. Normalmente só é possível a prevenção de ataques conhecidos
 
 ## detectiva
-IDS?\
+IDS\
 Medidas utilizadas para monitorar, identifcar, detectar e em alguns casos tomar alguma atitude/ação, frente a problemas de segurança que estão acontecendo
 
 ## corretiva
-?\
+Backup\
 Essa medidas tem como objetivo permitir a continuidade das operações do sistema. A medida corretiva é utilizada quando tudo mais falhou, ou seja, caso as medidas preventivas e detectivas não tenham sucesso, resta então aplicar medidas que corrijam os problemas que já ocorreram
 
 # Hacker
