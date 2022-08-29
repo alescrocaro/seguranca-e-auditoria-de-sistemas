@@ -16,7 +16,8 @@
 - redundancia
   -   backup
   -   internet de empresas diferentes
-  -   no break\
+  -   no break
+  -   RAID\
 ao subir dados na nuvem, a confidencialidade pode diminuir (exemplo do dropbox e o responsavel pelo servidor (do dropbox) talvez pode ter acesso a informações do servidor (lado humano - o responsavel pode n ser de boa indole))
 
 ## Integridade
