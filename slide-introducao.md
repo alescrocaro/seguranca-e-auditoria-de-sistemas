@@ -196,12 +196,26 @@ Mitigar: o virus pode ser amenizado, mas dificilmente 100% erradicado\
 
 WORM: não precisa ser iniciado, se prolifera sozinho\
 
-RANSOMWARE: qualquer virus/malware de sequestro de dados, feito por meio de criptografia, que usa como refém arquivos pessoais da própria vítima e cobra resgate para restabelecer o acesso a estes arquivos. 
+RANSOMWARE: qualquer virus/malware de sequestro de dados, feito por meio de criptografia, que usa como refém arquivos pessoais da própria vítima e cobra resgate para restabelecer o acesso a estes arquivos. \
+
+SPYWARE: Fica observando\
+
+TROJAN: Um aplicativo com um malware oculto\
+
+Se previnir de virus: manter softwares atualizados
 
 # DoS
 ataque local, torna um serviço lento ou indisponivel\
+ataque vem de uma só fonte\
 virus antigamente usava ideia de DoS, Exemplo: SO\
 um ataque vindo de varias maquinas pode ser um DoS\
+ping da morte: gerar muitos pings para uma determinada máquina\
+muito complicado de ser resolvido:\
+pode ser resolvido com DoS (bloquear faixa de ips, usar captcha para verificar se eh humano se n for bloqueia, tenta ver o padrão pra bloquear)\
+
+como se prooteger:\
+    manter sistema atualizado, para evitar vulnerabilidades\
+    retira serviços necessários da rede
 
 # DDoS
 Ataque vem de mais de uma fonte, via rede.\
