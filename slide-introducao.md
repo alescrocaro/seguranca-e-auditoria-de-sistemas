@@ -223,6 +223,39 @@ pode não ser um ataque massivo, da pra realizar ataques com 1, 2 ou 5 pacotes\
 um ataque vindo de apenas uma maquina não pode ser um DDoS\
 
 
+# Engenharia social
+arte de enganar\
+golpe de telefone sequestro\
+fake news tb se encaixa aqui\
+
+combatido com treinamento das pessoas
+
+
+# Criptografia
+embaralha informação é a torna incompreensível\
+ideia antiga\
+antigamente o segredo da criptografia era o algoritmo que criptografava\
+agora o algoritmo de criptografia é publico, atualmente há a ideia de chaves (binárias)\
+    chave geralmente é um conjunto de bits\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
