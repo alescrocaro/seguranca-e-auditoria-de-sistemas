@@ -224,11 +224,16 @@ um ataque vindo de apenas uma maquina não pode ser um DDoS\
 
 
 # Engenharia social
+é um método não técnico de quebrar a segurança de sistemas ou redes. É o processo de enganar usuários de sistemas/redes e convencê-los de fornecer informações que podem ser usadas para anular ou burlar sistemas de segurança e/ou obter informações sensíveis.\
 arte de enganar\
 golpe de telefone sequestro\
 fake news tb se encaixa aqui\
+combatido com treinamento das pessoas\
 
-combatido com treinamento das pessoas
+Baseada em humanos: refere-se à interação pessoa-a-pessoa para conseguir as informações desejadas. Um exemplo é ligar para a empresa e tentar conseguir senhas;
+
+
+Baseada em computadores: nessa o haceer utiliza algum meio computacional para tentar obter informações sensíveis. Um exemplo é enviar um e-mail para a vítima pedindo que a vítima entre com seu usuário e senha em uma página Web falsa (phishing).
 
 
 # Criptografia
@@ -237,6 +242,7 @@ ideia antiga\
 antigamente o segredo da criptografia era o algoritmo que criptografava\
 agora o algoritmo de criptografia é publico, atualmente há a ideia de chaves (binárias)\
     chave geralmente é um conjunto de bits\
+A chave consiste em uma string que pode ser alterada sempre que necessário.\
 
 
 
