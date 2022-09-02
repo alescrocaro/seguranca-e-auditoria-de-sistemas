@@ -225,24 +225,60 @@ um ataque vindo de apenas uma maquina não pode ser um DDoS\
 
 # Engenharia social
 é um método não técnico de quebrar a segurança de sistemas ou redes. É o processo de enganar usuários de sistemas/redes e convencê-los de fornecer informações que podem ser usadas para anular ou burlar sistemas de segurança e/ou obter informações sensíveis.\
-arte de enganar\
+arte de persuadir alguem para fazer o q vc quer\
 golpe de telefone sequestro\
 fake news tb se encaixa aqui\
-combatido com treinamento das pessoas\
+***combatido com treinamento das pessoas***\
 
 Baseada em humanos: refere-se à interação pessoa-a-pessoa para conseguir as informações desejadas. Um exemplo é ligar para a empresa e tentar conseguir senhas;
-
 
 Baseada em computadores: nessa o haceer utiliza algum meio computacional para tentar obter informações sensíveis. Um exemplo é enviar um e-mail para a vítima pedindo que a vítima entre com seu usuário e senha em uma página Web falsa (phishing).
 
 
 # Criptografia
-embaralha informação é a torna incompreensível\
+embaralha informação e a torna incompreensível\
 ideia antiga\
 antigamente o segredo da criptografia era o algoritmo que criptografava\
+ou seja, depende do método usado para criptografar, esse não pode ser o segredo da criptografia, pois basta tê-lo para conseguir descriptografar\
 agora o algoritmo de criptografia é publico, atualmente há a ideia de chaves (binárias)\
     chave geralmente é um conjunto de bits\
 A chave consiste em uma string que pode ser alterada sempre que necessário.\
+A força da chave geralmente se dá pela quantidade de bits que a compõem\
+
+2 tipos:\
+única: a mesma chave criptografa e descriptografa a informação. *Não é bom para compartilhar infos com outras pessoas*.  *Todavia é mais rápido, utilizado para criptografar coisas privadas, como HD pessoal.*\
+pública e privada: tem a chave privada e a pública, a privada é pessoal e usada para **descriptografar** e a pública pode ser compartilhada e é usada para **criptografar**. ambas chaves estão 'conectadas'\
+O custo de descriptografar usando chave privada é maior do q usando chave unica\
+
+processo de assinatura online (certificado digital) é ao contrário: privada criptografa e publica descriptografa.\ 
+
+Não impede que dados sejam alterados e apagados\
+
+
+
+
+##### elementos de segurança referenciados em TCP/IP\
+
+Fisica:\
+inseguro: radio frequencia (wireless)\
+mais seguro: fibra (mais viável. o cabo pressurizado é mais seguro, porém não é muito utilizado pela população em geral)\
+
+
+Enlace:\
+mais seguro: cabo? wpa2, switch (substitui o hub - que era utilizado antigamente para roubar senhas), vpn\
+
+
+Inter-rede:\
+mais seguro: IPSec (melhoria no protocolo ip por questões de segurança, mas não é padrão); roteador (só faz filtragens de origem, destino e protocolo)\
+
+Transporte:\
+mais seguro: firewall (surgiu para melhorar a segurança que o roteador provinha)\
+
+Aplicação:\
+mais seguro: ssh, openVPN, https, proxy (filtragem de conteúdo)\
+
+
+***NADA É TOTALMENTE SEGURO!!!***
 
 
 
