@@ -44,8 +44,8 @@ Para visualizar todos processos em execução na máquina (de todos usuários, d
 
 ![pstree](https://user-images.githubusercontent.com/37521313/198886654-27e678e5-e4ca-4b0e-855d-c086f3520936.png)
 
-Além disso, é possível observar os processos visualizando kernel diretamente com o comando "cat /proc/\*/stat | awk '{print $1, $2}'". Dessa forma podemos visualizar processos que possivelmente foram escondidos por um invasor.\
-![processos vistos diretamente no kernel](https://user-images.githubusercontent.com/37521313/198887154-fca8e89d-0d83-40a3-8909-bef369cffe15.png)
+Além disso, é possível observar os processos visualizando kernel diretamente com o comando "cat /proc/\*/stat | awk '{print $1, $2}'". Dessa forma podemos visualizar processos que possivelmente foram escondidos por um invasor. \
+![processos vistos diretamente no kernel](https://user-images.githubusercontent.com/37521313/198887345-1efd9953-c747-4591-a70e-6b051f06b30f.png)
 
 
 Para matar um processo (utilizarei o mysql como exemplo), utilizei o comando "kill -811 pid". Ao utilizar o comando "ps aux" novamente pode ser observado que tal comando sumiu.
