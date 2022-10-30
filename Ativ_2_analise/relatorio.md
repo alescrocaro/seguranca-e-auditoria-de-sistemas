@@ -44,11 +44,18 @@ Para visualizar todos processos em execução na máquina (de todos usuários, d
 
 ![pstree](https://user-images.githubusercontent.com/37521313/198886654-27e678e5-e4ca-4b0e-855d-c086f3520936.png)
 
-Além disso, é possível observar os processos visualizando kernel diretamente com o comando "cat /proc/\*/stat | awk '{print $1, $2}'". Dessa forma podemos visualizar processos que possivelmente foram escondidos por um invasor. \
+Além disso, é possível observar os processos visualizando kernel diretamente com o comando "cat /proc/\*/stat | awk '{print $1, $2}'". Dessa forma podemos visualizar processos que possivelmente foram escondidos por um invasor. Com isso descobri o processo rpc.mountd, que é um risco à segurança e pode ser usado (ou ter sido usado) por um invasor.\
 ![processos vistos diretamente no kernel](https://user-images.githubusercontent.com/37521313/198887345-1efd9953-c747-4591-a70e-6b051f06b30f.png)
 
-
 Para matar um processo (utilizarei o mysql como exemplo), utilizei o comando "kill -811 pid". Ao utilizar o comando "ps aux" novamente pode ser observado que tal comando sumiu.
+
+# Alterações ou possíveis alterações no sistema de arquivos
+
+Para buscar por alterações, fiz a instalação do rpm, que fará tal verificação. Para tanto, utilizei o comando "rpm -Va > /tmp/rpmVA.log"; entretanto nenhuma saída foi gerada, então imagino que esteja tudo correto.
+
+# Análise nos arquivos de log do sistema que podem apontar atividades maliciosas ou suspeitas
+
+
 
 
 
