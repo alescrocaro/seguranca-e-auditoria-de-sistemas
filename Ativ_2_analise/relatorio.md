@@ -55,9 +55,24 @@ Para buscar por alterações, fiz a instalação do rpm, que fará tal verifica�
 
 # Análise nos arquivos de log do sistema que podem apontar atividades maliciosas ou suspeitas
 
+Os arquivos de log são locais onde se pode obter informações preciosas à respeito da segurança da máquina, então deve-se realizar consultas neles periodicamente.
 
+Utilizei o comando "grep fail auth.log" e "grep repeat auth.log"; o segundo não retornou nada, já o primeiro retorno as duas mensagens vistas abaixo que não aparentam representar perigos à segurança.\
+![grep fail auth.log](https://user-images.githubusercontent.com/37521313/198889337-484deb72-d843-49bb-8de0-ae4e8865608b.png)
 
+Além disso, utilizei os comandos "zgrep fail auth.log*" e "zgrep repeat auth.log*". Como mostrado nas capturas abaixo.
+![zgrep fail auth.log*](https://user-images.githubusercontent.com/37521313/198889518-edabec55-4ecc-4181-8d6f-2fce3b13129c.png)
+![zgrep repeat auth.log*](https://user-images.githubusercontent.com/37521313/198889550-64a7e744-d37f-40ae-9252-6dca75bcdaaa.png)
 
+Analizando as capturas acima, percebe-se que há algo estranho no arquivo 'auth.log.4.gz', com várias falhas de autenticação seguidas, isso pode ser um problema, então iremos utilizar o comando "zcat auth.log.4.gz" para analisar.\
+A saída desse comando não gerou nenhuma ameaça aparente acerca do que eu estava procurando, porém encontrei outra ameaça (que pode ser vista no printscreen abaixo). Essa adição do usuário 'dacom' aos grupos é suspeita e deve ser analisada, principalmente por ele ter sido adicionado ao grupo 'adm'.\
+![zcat auth.log.4.gz](https://user-images.githubusercontent.com/37521313/198889828-3a9e2b78-19b5-4ce0-9786-250d5428fbfb.png)
+
+Para verificar últimas tentativas de logon, utilizei o comando "tail -f auth.log" (no diretorio /var/log), e analisando a saída, vista abaixo, há indícios de que está sendo executado um script (devido à várias e repetidas sessões criadas e fechadas). \
+![tail -f auth.log](https://user-images.githubusercontent.com/37521313/198890633-d8fc0e1f-47e1-49b5-bbeb-5e73d52d2523.png)
+
+Fiz uma breve análise e pesquisas do que isso poderia ser, mas não encontrei muitos resultados.\
+![analise cron](https://user-images.githubusercontent.com/37521313/198890764-28dcca5c-0ee8-45bb-948a-4013ced7ef70.png)
 
 
 
