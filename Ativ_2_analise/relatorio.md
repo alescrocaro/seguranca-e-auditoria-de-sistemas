@@ -72,10 +72,18 @@ Fiz uma breve análise e pesquisas do que isso poderia ser, mas não encontrei m
 
 
 ## Análise/resumo geral a respeito do resultado obtido na análise realizada, tentando correlacionar os dados obtidos em cada um dos passos da prática de segurança. Se foram encontrados problemas, aponte esses problemas, comente como esses podem afetar ou já afetaram a segurança do sistema e se você conseguir apresente possíveis soluções
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+
+Como pôde ser visto, foram encontrados usuários, processos e informações em log suspeitas. Esses três itens são extremamente interligados, pois quando um cracker vai realizar um ataque, ele geralmente vai tentar explorar processos em execução na máquina, ao conseguir realizar essa exploração, provavelmente vai querer manter seu acesso ao sistema, e então vai manipular ou criar um usuário e tentar mudar sua permissão para de administrador; e, se ele não excluir ou modificar arquivos de log, toda sua ação ficará registrada neles. Ao acontecer esse ataque, tal como há indícios de que houve na máquina estudada, pode ser que ele seja devastador, ou seja, o cracker tem completo acesso ao sistema, podendo vigiar ou roubar dados tranquilamente.\
+Para resolver o problema de usuários suspeitos, se utilizaria o comando "passwd -l user", dessa forma é possível bloquear o acesso de um usuário. Acerca do problema dos processos, já foi exemplificado acima como seria feito com o comando "kill".
+
 
 ## Conclusão a respeito dos passos realizados e de possíveis facilidades/dificuldades encontradas durante a realização desses passos.
 TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+
+
+
+
+
 
 ## Comparar PenTeste com as Práticas de segurança, principalmente em relação aos resultados obtidos.
 TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
