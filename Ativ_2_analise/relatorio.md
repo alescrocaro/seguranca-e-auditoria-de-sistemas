@@ -6,15 +6,10 @@
 **Professor:** Luiz Arthur Feitosa dos Santos\
 **Universidade Tecnológica Federal do Paraná (UTFPR)**
 
-[link para a especificação do trabalho](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1322162)
+[Especificação do trabalho](https://moodle.utfpr.edu.br/mod/assign/view.php?id=1322162)
 
 ## Introdução a respeito dos procedimentos realizados
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
-
-
-
-
-
+Os procedimentos realizados nesta atividade foram baseados em conhecimentos adquiridos durante as aulas sobre práticas de segurança. Tais aulas mostraram passos para realizar uma análise do sistema em busca de evidências de que ele foi comprometido quanto à sua segurança. Os passos realizados foram: verificação de usuários não autorizados ou suspeitos, verificação de processos suspeitos e/ou maliciosos, verificação de alterações ou possíveis alterações no sistema de arquivos e, por fim, análise nos arquivos de log do sistema que podem apontar atividades maliciosas ou suspeitas. Todos os comando apresentados foram utilizados durante as aulas.
 
 
 ## Descrição dos passos realizados Tal descrição deve apresentar comandos utilizados, resultados obtidos e conclusão parcial de cada resultado
@@ -73,7 +68,6 @@ Para verificar últimas tentativas de logon, utilizei o comando "tail -f auth.lo
 
 Fiz uma breve análise e pesquisas do que isso poderia ser, mas não encontrei muitos resultados.\
 ![analise cron](https://user-images.githubusercontent.com/37521313/198890764-28dcca5c-0ee8-45bb-948a-4013ced7ef70.png)
-
 
 
 
