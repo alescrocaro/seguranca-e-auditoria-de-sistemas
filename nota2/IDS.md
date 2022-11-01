@@ -58,7 +58,10 @@ Falso positivo
 Falso negativo
 - Ocorre problema de segurança e IDS não alerta
 - mais severo que o anterior
-- 
+
+
+OSSEC pode ser usado em qlqr servidor
+Snort tem q estar em uma maquina isolada
 
 
 
