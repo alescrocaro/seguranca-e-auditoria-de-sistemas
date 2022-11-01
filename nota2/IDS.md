@@ -1,10 +1,12 @@
 IDS 
 - monitora o sistema, se ocorrer alguma anormalidade de segurança, reporta.
 - só detecta, é detectivo
+- problema: n toma atitudes
 
 IPS 
 - é um tipo de IDS, toma alguma atitude
 - comum chamar tudo de IDS
+- problema: falso positivo bloqueia cois aq n deveria
 
 IDPS
 - IDS e IPS juntos
@@ -16,13 +18,15 @@ HIDS
 - verifica logs, processos, sistema de arquivos
 - verifica localmente na máquina
 - deve ser instalado em cada máquina, por isso geralmente é instalado em servidores, roteador padrão
+- desvantagem: instaçacao maquina p maquina
+- vantagem: n tem problema cm switchs e criptografia
 
 NIDS
 - sistema de detecção de intrusão baseado em rede
 - pode ser instalado em uma única máquina para monitorar a rede toda
 - tem que receber informações de todos hosts, então só funciona em switchs que tem funcionalidade de espelhar portas
 - mais utilizado para monitorar infos que vão para internet, e não internamente à rede
-- problema com criptografia, não vai analisar
+- problema: n lida bem com switchs e criptografia, não vai analisar
 - analisa pacotes de rede
 - máquina do NIDS não precisa ter IP, logo se não tiver IP não pode ser atacada via rede, mas é ruim para o admnistrador da rede
   - melhor seria alocar um IP fora da faixa da rede
