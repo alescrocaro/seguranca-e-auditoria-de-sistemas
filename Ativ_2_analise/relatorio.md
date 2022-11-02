@@ -78,10 +78,7 @@ Para resolver o problema de usuários suspeitos, se utilizaria o comando "passwd
 
 
 ## Conclusão a respeito dos passos realizados e de possíveis facilidades/dificuldades encontradas durante a realização desses passos.
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
-
-
-
+Como pôde ser observado, os passos para realização da análise são bem sistemáticos, claros e efetivos. Há passos que necessitam de menos esforço, como o primeiro, e outros mais difíceis como a verificação do sistema de arquivos, que necessitaria de uma configuração de um programa como o AIDE para ser mais efetivo e evitar esforços desnecessários (verificação manual de todo o sistema).
 
 
 
