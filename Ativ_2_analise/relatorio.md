@@ -77,11 +77,11 @@ Como pôde ser visto, foram encontrados usuários, processos e informações em 
 Para resolver o problema de usuários suspeitos, se utilizaria o comando "passwd -l user", dessa forma é possível bloquear o acesso de um usuário. Acerca do problema dos processos, já foi exemplificado acima como seria feito com o comando "kill".
 
 
-## Conclusão a respeito dos passos realizados e de possíveis facilidades/dificuldades encontradas durante a realização desses passos.
+## Conclusão a respeito dos passos realizados e de possíveis facilidades/dificuldades encontradas durante a realização desses passos
 Como pôde ser observado, os passos para realização da análise são bem sistemáticos, claros e efetivos. Há passos que necessitam de menos esforço, como o primeiro, e outros mais difíceis como a verificação do sistema de arquivos, que necessitaria de uma configuração de um programa como o AIDE para ser mais efetivo e evitar esforços desnecessários (verificação manual de todo o sistema).
 
 
 
-## Comparar PenTeste com as Práticas de segurança, principalmente em relação aos resultados obtidos.
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+## Comparar PenTeste com as Práticas de segurança, principalmente em relação aos resultados obtidos
+Ambos estão diretamente interligados, a verificação de usuários poderia encontrar um usuário criado na fase 'mantendo acesso', já a verificação de processos poderia encontrar rastros criados na fase 'escaneamento' ou 'ganhando acesso', e as fases de verificação de sistema de arquivos e verificação dos logs podem encontrar pistas de tudo que um possível invasor observou, alterou ou excluiu no sistema.   
 
