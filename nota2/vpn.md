@@ -1,5 +1,5 @@
 # VPN
-- Tunelamento -> Trafegar dados de uma rede privada em uma rede pública
+- Tunelamento -> Trafegar dados de uma rede privada em uma rede pública, mas pode ser feito priv-priv ou pub-pub
 
 nat - qnd o pacote sai da rede, altera o endereço de origem
 hacker pode fazer uso da vpn p n ser pego pelo nids ao fazer um get shadow p exemplo
