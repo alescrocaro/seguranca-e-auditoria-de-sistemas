@@ -1,5 +1,6 @@
 # VPN
 - Tunelamento -> Trafegar dados de uma rede privada em uma rede pública
+
 nat - qnd o pacote sai da rede, altera o endereço de origem
 hacker pode fazer uso da vpn p n ser pego pelo nids ao fazer um get shadow p exemplo
 proxy pode ser usado para monitorar usuários (utfpr p exemplo)
