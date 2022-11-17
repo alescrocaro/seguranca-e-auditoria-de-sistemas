@@ -11,15 +11,17 @@ IPS
 IDPS
 - IDS e IPS juntos
 
-HIDS
+HIDS - Host-based intrusion detection system
 - sistema de detectção de intrusão baseado em hosts
 - software
 - monitora máquina
-- verifica logs, processos, sistema de arquivos
+- MONITORA logs, processos, sistema de arquivos
 - verifica localmente na máquina
 - deve ser instalado em cada máquina, por isso geralmente é instalado em servidores, roteador padrão
 - desvantagem: instaçacao maquina p maquina
-- vantagem: n tem problema cm switchs e criptografia
+- vantagem:   
+  - n tem problema cm switchs e criptografia
+  - Pode detectar processos ou usuários maliciosos
 
 NIDS
 - sistema de detecção de intrusão baseado em rede
@@ -32,6 +34,10 @@ NIDS
   - melhor seria alocar um IP fora da faixa da rede
   - ou criar VLAN somente para o NIDS
 - não instala NIDS em máquinas que executem outros serviços
+- VANTAGENS:
+  - Ajuda na segurança de vários hosts da rede;
+  - Pode ser invisível na rede
+  - Não interfere nos fluxos da rede  
 
 infos de HIDS e NIDS podem ser guardadas em outra maquina para melhorar a segurança (se ocorrer ataque, menos chance de perder dados)
 
@@ -43,12 +49,21 @@ IDS baseado em assinaturas
 - vírus novo não está na base de assinaturas, então passa pelo IDS sem alerta (falso negativo)
 - acontece mais falsos positivos
 
+sondagem - \
+Uma assinatura é composta por uma seqüência de bytes que representam um ataque. Quando é encontrado no trafego da rede algum código que seja idêntico às assinaturas, é uma provável indicação de ataque. Os SDI utilizam esta abordagem para a detecção de intrusão, através da utilização de expressões regulares, análise de contexto ou linguagens de assinatura, os pacotes de rede são analisados e comparados com uma base de dados de assinaturas. Um exemplo de assinatura seria a string /etc/shadow na qual, qualquer pacote de rede utilizando por exemplo, Telnet, que apresente um conjunto de caracteres similares à este, irá gerar um alerta, como por exemplo com o comando: cat /etc/shadow
+
 *prova*
 IDS baseado em comportamento/anomalia
 - exemplo: analise de acesso de funcionarios
   - constroi sua base dedados de horarios que um funcionario geralmente loga no sistema, se algum dia houver um login em horario muito diferente, vai gerar um alerta.
 - melhor p encontrar ataques novos, pois tudo que será novo, será considerado uma anomalia
 - gera mais falsos positivos
+
+sondagem - 
+- Mais complicado de configurar em relação ao baseado à assinatura
+- As anomalias são consideradas ataques
+- Pode produzir mais falsos positivos do que o baseado em assinatura
+- Capaz de identificar ataques novos ou desconhecidos
 
 Falso positivo
 - IDS fica gerando alertas de coisas que na verdade não estão ocorrendo
