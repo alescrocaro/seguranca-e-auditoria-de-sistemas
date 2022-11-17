@@ -29,7 +29,7 @@ NIDS
 - tem que receber informações de todos hosts, então só funciona em switchs que tem funcionalidade de espelhar portas
 - mais utilizado para monitorar infos que vão para internet, e não internamente à rede
 - problema: n lida bem com switchs e criptografia, não vai analisar
-- analisa pacotes de rede
+- MONITORA pacotes de rede
 - máquina do NIDS não precisa ter IP, logo se não tiver IP não pode ser atacada via rede, mas é ruim para o admnistrador da rede
   - melhor seria alocar um IP fora da faixa da rede
   - ou criar VLAN somente para o NIDS
