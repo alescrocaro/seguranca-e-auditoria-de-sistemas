@@ -1,7 +1,11 @@
-IDS 
+IDS - Intrusion Detection System
 - monitora o sistema, se ocorrer alguma anormalidade de segurança, reporta.
 - só detecta, é detectivo
-- problema: n toma atitudes
+- problema: n toma atitudes \
+IDSs baseados em redes podem apresentar problemas em ambientes de rede que utilizam switches ou apresentam grande parte do seu fluxo de pacotes criptografado.
+
+
+
 
 IPS 
 - é um tipo de IDS, toma alguma atitude
@@ -22,6 +26,9 @@ HIDS - Host-based intrusion detection system
 - vantagem:   
   - n tem problema cm switchs e criptografia
   - Pode detectar processos ou usuários maliciosos
+- exemplos
+  - OSSEC
+  - AIDE
 
 NIDS
 - sistema de detecção de intrusão baseado em rede
@@ -38,6 +45,9 @@ NIDS
   - Ajuda na segurança de vários hosts da rede;
   - Pode ser invisível na rede
   - Não interfere nos fluxos da rede  
+- exemplos
+  - Snort
+  - Suricata
 
 infos de HIDS e NIDS podem ser guardadas em outra maquina para melhorar a segurança (se ocorrer ataque, menos chance de perder dados)
 
@@ -80,5 +90,6 @@ Snort tem q estar em uma maquina isolada
 
 
 
-
-
+- identificar e reagir contra possíveis problemas de segurança
+IPS
+IDPS
