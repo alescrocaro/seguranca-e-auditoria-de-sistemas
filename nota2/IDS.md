@@ -22,10 +22,11 @@ HIDS - Host-based intrusion detection system
 - MONITORA logs, processos, sistema de arquivos
 - verifica localmente na máquina
 - deve ser instalado em cada máquina, por isso geralmente é instalado em servidores, roteador padrão
-- desvantagem: instaçacao maquina p maquina
-- vantagem:   
+- VANTAGENS:   
   - n tem problema cm switchs e criptografia
   - Pode detectar processos ou usuários maliciosos
+- DESVANTAGENS:
+  - instaçacao maquina p maquina
 - exemplos
   - OSSEC
   - AIDE
