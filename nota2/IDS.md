@@ -59,7 +59,7 @@ IDS baseado em assinaturas
 - Desvantagem: pode ser facil de burlar
 - procura em trafego de rede de bytes ou seqüências de pacotes conhecidos como maliciosos. 
 - vírus novo não está na base de assinaturas, então passa pelo IDS sem alerta (falso negativo)
-- acontece mais falsos positivos
+- acontece mais falsos positivos??
 
 sondagem - \
 Uma assinatura é composta por uma seqüência de bytes que representam um ataque. Quando é encontrado no trafego da rede algum código que seja idêntico às assinaturas, é uma provável indicação de ataque. Os SDI utilizam esta abordagem para a detecção de intrusão, através da utilização de expressões regulares, análise de contexto ou linguagens de assinatura, os pacotes de rede são analisados e comparados com uma base de dados de assinaturas. Um exemplo de assinatura seria a string /etc/shadow na qual, qualquer pacote de rede utilizando por exemplo, Telnet, que apresente um conjunto de caracteres similares à este, irá gerar um alerta, como por exemplo com o comando: cat /etc/shadow
