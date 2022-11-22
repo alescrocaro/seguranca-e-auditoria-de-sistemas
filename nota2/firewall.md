@@ -6,6 +6,9 @@ isola a rede de um ambiente hostil (internet).\
 composto por regras que ditam o que entra e sai e políticas q eh implantada por meio de regras\
 não impede de pegar virus\
 
+
+controla o q entra e sai da rede\
+
 2 tipos de politica
 - liberar tudo\
 tudo que não está bloqueado é liberado\
@@ -22,10 +25,16 @@ Projetos de firewall:\
 não pode ser acessado como servidor
 
 - host bastion - host bastião\
-pode ser acessado como servidor
+pode ser acessado como servidor\
+so deve ser acessado para serviços q propoe, como BD
 
 - demilitarized zone - DMZ - zona deslimitarizada
-?
+LAN bastião\
+controla por firewall qm pode acessar as maquinas na rede
+
+- LAN invisivel\
+NAT\
+
 
 - bridge 
 ?
