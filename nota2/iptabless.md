@@ -1,6 +1,18 @@
 # TABLES
 
-## situações
+
+
+**PROVA**:\
+TRADUÇÃO DE REGRAS
+
+
+para validar a regra, também é necessário fazer o caminho de volta do pacote
+
+
+## filter 
+nao precisa da opção -t 
+
+### situações
 vêm com politica padrão (accept)
 
 * input
@@ -16,17 +28,6 @@ vêm com politica padrão (accept)
   * nem o ip de origem nem o de destino é o firewall 
 
 não especifica porta do lado do cliente (porta de origem é alta e aleatória)
-
-**PROVA**:\
-TRADUÇÃO DE REGRAS
-
-
-para validar a regra, também é necessário fazer o caminho de volta do pacote
-
-
-## filter 
-nao precisa da opção -t \ 
-
 
 ## NAT
 
