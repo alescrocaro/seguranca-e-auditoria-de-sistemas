@@ -9,7 +9,7 @@ TRADUÇÃO DE REGRAS
 para validar a regra, também é necessário fazer o caminho de volta do pacote
 
 
-## filter 
+## FILTER 
 nao precisa da opção -t 
 
 ### situações
@@ -29,7 +29,7 @@ vêm com politica padrão (accept)
 
 não especifica porta do lado do cliente (porta de origem é alta e aleatória)
 
-## NAT
+## nat
 
 
-## mangle
+## MANGLE
