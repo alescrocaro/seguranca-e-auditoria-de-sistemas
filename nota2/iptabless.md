@@ -32,4 +32,4 @@ não especifica porta do lado do cliente (porta de origem é alta e aleatória)
 ## NAT
 
 
-## mamble
+## mangle
