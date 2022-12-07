@@ -120,3 +120,24 @@ up /usr/bin/iperf3 -s -p 3306 -D
 up /usr/bin/iperf3 -s -p 23 -D
 up /usr/bin/iperf3 -s -p 22 -D
 ```
+
+Com as configurações de ips e gws prontas, deve-se então testar se as máquinas realizam pings entre si e se o iperf está funcionando corretamente. Para tanto, executa-se os seguintes comandos:
+
+```bash
+# pings
+root@Host-1:/$ ping 172.30.0.2
+root@Host-1:/$ ping 10.10.10.4
+root@Host-1:/$ ping 192.168.122.5
+
+# serviços (teste também para o host 192.168.122.5)
+root@Host-1:/$ iperf3 -c 10.10.10.3 -p 22
+root@Host-1:/$ iperf3 -c 10.10.10.3 -p 23
+root@Host-1:/$ iperf3 -c 10.10.10.3 -p 80
+root@Host-1:/$ iperf3 -c 10.10.10.3 -p 443
+root@Host-1:/$ iperf3 -c 10.10.10.3 -p 3306
+```
+
+
+
+
+
