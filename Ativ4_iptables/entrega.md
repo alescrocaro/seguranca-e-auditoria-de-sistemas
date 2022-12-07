@@ -173,7 +173,7 @@ iptables -A FORWARD -p tcp --dport 23 -j DROP
 
 echo "Somente host1 pode acessar firewall via ssh, fora isso ninguem pode acessar nenhum servidor no firewall"
 iptables -A INPUT -s 172.30.0.1 -p tcp --dport 22 -j ACCEPT
-iptables -A INPUT -m state --state NEW -j DROP
+iptables -A INPUT -m state --state NEW,INVALID -j DROP
 
 
 echo "Somente hosts da LAN podem acessar DMZ via SSH"
