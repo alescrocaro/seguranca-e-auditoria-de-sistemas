@@ -2,8 +2,8 @@
 
 ![image](https://user-images.githubusercontent.com/37521313/206291541-cf0735f3-63ef-4254-85ca-e8f6e804e3ad.png)
 
-### Configuração
-#### LAN1:
+# Configuração da rede
+### LAN1:
 Host 1:
 ```
 auto eth0
@@ -38,7 +38,7 @@ up /usr/bin/iperf3 -s -p 23 -D
 up /usr/bin/iperf3 -s -p 22 -D
 ```
 
-#### DMZ:
+### DMZ:
 Host 3:
 ```
 auto eth0
@@ -73,7 +73,7 @@ up /usr/bin/iperf3 -s -p 23 -D
 up /usr/bin/iperf3 -s -p 22 -D
 ```
 
-#### Internet:
+### Internet:
 Host 5:
 ```
 auto eth0
@@ -91,7 +91,7 @@ up /usr/bin/iperf3 -s -p 23 -D
 up /usr/bin/iperf3 -s -p 22 -D
 ```
 
-#### Firewall:
+### Firewall:
 ```
 auto eth0
 iface eth0 inet static
@@ -121,6 +121,7 @@ up /usr/bin/iperf3 -s -p 23 -D
 up /usr/bin/iperf3 -s -p 22 -D
 ```
 
+### Teste
 Com as configurações de ips e gws prontas, deve-se então testar se as máquinas realizam pings entre si e se o iperf está funcionando corretamente. Para tanto, executa-se os seguintes comandos:
 
 ```bash
