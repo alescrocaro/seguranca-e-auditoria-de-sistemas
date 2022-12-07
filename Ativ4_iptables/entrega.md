@@ -85,3 +85,33 @@ up /usr/bin/iperf3 -s -p 81 -D
 up /usr/bin/iperf3 -s -p 22 -D
 up /usr/bin/iperf3 -s -p 23 -D
 ```
+
+#### Firewall:
+```
+auto eth0
+iface eth0 inet static
+  hwaddress 00:00:00:00:01:01
+  address 192.168.122.254
+  netmask 255.255.255.0
+  gateway 192.168.122.1
+  up echo nameserver 8.8.8.8 > /etc/resolv.conf
+  
+auto eth1
+iface eth1 inet static
+  hwaddress 00:00:00:00:01:02
+  address 172.30.0.254
+  netmask 255.255.255.0
+  
+auto eth2
+iface eth2 inet static
+  hwaddress 00:00:00:00:01:03
+  address 10.10.10.254
+  netmask 255.255.255.0
+  
+  
+  
+up /usr/bin/iperf3 -s -p 80 -D
+up /usr/bin/iperf3 -s -p 81 -D
+up /usr/bin/iperf3 -s -p 22 -D
+up /usr/bin/iperf3 -s -p 23 -D
+```
