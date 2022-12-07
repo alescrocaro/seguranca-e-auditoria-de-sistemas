@@ -13,11 +13,12 @@ iface eth0 inet static
   netmask 255.255.255.0
   gateway 172.30.0.254
   up echo nameserver 8.8.8.8 > /etc/resolv.conf
-  
+
 up /usr/bin/iperf3 -s -p 80 -D
-up /usr/bin/iperf3 -s -p 81 -D
-up /usr/bin/iperf3 -s -p 22 -D
+up /usr/bin/iperf3 -s -p 443 -D
+up /usr/bin/iperf3 -s -p 3306 -D
 up /usr/bin/iperf3 -s -p 23 -D
+up /usr/bin/iperf3 -s -p 22 -D
 ```
 
 Host 2:
@@ -31,9 +32,10 @@ iface eth0 inet static
   up echo nameserver 8.8.8.8 > /etc/resolv.conf
   
 up /usr/bin/iperf3 -s -p 80 -D
-up /usr/bin/iperf3 -s -p 81 -D
-up /usr/bin/iperf3 -s -p 22 -D
+up /usr/bin/iperf3 -s -p 443 -D
+up /usr/bin/iperf3 -s -p 3306 -D
 up /usr/bin/iperf3 -s -p 23 -D
+up /usr/bin/iperf3 -s -p 22 -D
 ```
 
 #### DMZ:
@@ -48,9 +50,10 @@ iface eth0 inet static
   up echo nameserver 8.8.8.8 > /etc/resolv.conf
   
 up /usr/bin/iperf3 -s -p 80 -D
-up /usr/bin/iperf3 -s -p 81 -D
-up /usr/bin/iperf3 -s -p 22 -D
+up /usr/bin/iperf3 -s -p 443 -D
+up /usr/bin/iperf3 -s -p 3306 -D
 up /usr/bin/iperf3 -s -p 23 -D
+up /usr/bin/iperf3 -s -p 22 -D
 ```
 
 Host 4:
@@ -64,9 +67,10 @@ iface eth0 inet static
   up echo nameserver 8.8.8.8 > /etc/resolv.conf
   
 up /usr/bin/iperf3 -s -p 80 -D
-up /usr/bin/iperf3 -s -p 81 -D
-up /usr/bin/iperf3 -s -p 22 -D
+up /usr/bin/iperf3 -s -p 443 -D
+up /usr/bin/iperf3 -s -p 3306 -D
 up /usr/bin/iperf3 -s -p 23 -D
+up /usr/bin/iperf3 -s -p 22 -D
 ```
 
 #### Internet:
@@ -81,9 +85,10 @@ iface eth0 inet static
   up echo nameserver 8.8.8.8 > /etc/resolv.conf
   
 up /usr/bin/iperf3 -s -p 80 -D
-up /usr/bin/iperf3 -s -p 81 -D
-up /usr/bin/iperf3 -s -p 22 -D
+up /usr/bin/iperf3 -s -p 443 -D
+up /usr/bin/iperf3 -s -p 3306 -D
 up /usr/bin/iperf3 -s -p 23 -D
+up /usr/bin/iperf3 -s -p 22 -D
 ```
 
 #### Firewall:
@@ -109,9 +114,9 @@ iface eth2 inet static
   netmask 255.255.255.0
   
   
-  
 up /usr/bin/iperf3 -s -p 80 -D
-up /usr/bin/iperf3 -s -p 81 -D
-up /usr/bin/iperf3 -s -p 22 -D
+up /usr/bin/iperf3 -s -p 443 -D
+up /usr/bin/iperf3 -s -p 3306 -D
 up /usr/bin/iperf3 -s -p 23 -D
+up /usr/bin/iperf3 -s -p 22 -D
 ```
