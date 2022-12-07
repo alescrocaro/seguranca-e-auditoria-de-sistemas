@@ -139,12 +139,14 @@ root@Host-1:/$ iperf3 -c 10.10.10.3 -p 3306
 ```
 
 # Configuração do Firewall
-Primeiramente, deve-se criar sua pasta dentro do diretório `/etc` com o comando abaixo
 ```bash
-# Criacao de sua pasta dentro do diretorio '/etc'
+# Criacao de seu arquivo de configuracao dentro do diretorio '/etc'
 root@Firewall:/$ mkdir /etc/firewall
 root@Firewall:/$ cd /etc/firewall
 root@Firewall:/etc/firewall$ vi firewall.sh
+
+# Dando permissoes no arquivo
+root@Firewall:/etc/firewall$ chmod a+x firewall.sh
 ```
 
 
