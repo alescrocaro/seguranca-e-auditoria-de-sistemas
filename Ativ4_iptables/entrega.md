@@ -1,9 +1,32 @@
+Alexandre Aparecido Scrocaro Junior
+Atividade 4 - Firewall com iptables
+
+# Introdução
+
+# Definições
+
+## Firewall
+
+## iptables
+
+## Tabelas
+
+### Filter
+resumo
+#### Situação1
+
+### Nat
+
+### Mangle
+
+
+
 # Cenário
 
 ![image](https://user-images.githubusercontent.com/37521313/206291541-cf0735f3-63ef-4254-85ca-e8f6e804e3ad.png)
 
-# Configuração da rede
-### LAN1:
+## Configuração da rede
+#### LAN1:
 Host 1:
 ```
 auto eth0
@@ -38,7 +61,7 @@ up /usr/bin/iperf3 -s -p 23 -D
 up /usr/bin/iperf3 -s -p 22 -D
 ```
 
-### DMZ:
+#### DMZ:
 Host 3:
 ```
 auto eth0
@@ -73,7 +96,7 @@ up /usr/bin/iperf3 -s -p 23 -D
 up /usr/bin/iperf3 -s -p 22 -D
 ```
 
-### Internet:
+#### Internet:
 Host 5:
 ```
 auto eth0
@@ -91,7 +114,7 @@ up /usr/bin/iperf3 -s -p 23 -D
 up /usr/bin/iperf3 -s -p 22 -D
 ```
 
-### Firewall:
+#### Firewall:
 ```
 auto eth0
 iface eth0 inet static
@@ -121,7 +144,7 @@ up /usr/bin/iperf3 -s -p 23 -D
 up /usr/bin/iperf3 -s -p 22 -D
 ```
 
-### Teste
+#### Teste das configurações
 Com as configurações de ips e gws prontas, deve-se então testar se as máquinas realizam pings entre si e se o iperf está funcionando corretamente. Para tanto, executa-se os seguintes comandos:
 
 ```bash
@@ -138,7 +161,7 @@ root@Host-1:/$ iperf3 -c 10.10.10.3 -p 443
 root@Host-1:/$ iperf3 -c 10.10.10.3 -p 3306
 ```
 
-# Configuração inicial do Firewall
+## Configuração inicial do Firewall
 ```bash
 # Criacao de seu arquivo de configuracao dentro do diretorio '/etc'
 root@Firewall:/$ mkdir /etc/firewall
@@ -149,7 +172,7 @@ root@Firewall:/etc/firewall$ vi firewall.sh
 root@Firewall:/etc/firewall$ chmod a+x firewall.sh
 ```
 
-# Criando regras do firewall
+## Criando regras do firewall
 ```sh
 echo "Iniciando Firewall..."
 
@@ -201,8 +224,26 @@ iptables -A FORWARD -o eth1 -m state --state NEW,INVALID  -j DROP
 
 echo "Configuracao concluida."
 ```
+## Testes
+1. Verificar se o Host 1 acessa o Host 3 via HTTP – ele deve conseguir.
+2. Verificar se o Host 1 acessa o Host 4 via HTTP – ele não deve conseguir.
+3. Verificar se o Host 1 acessa o Host 4 via HTTPS – ele deve conseguir.
+4. Verificar se o Host 2 acessa o Host 3 via HTTP, HTTPS e SSH – ele não deve conseguir.
+5. Verificar se o Host 2 acessa o Host 5 via SSH – ele deve conseguir.
+6. Verificar se o Host 2 acessa o Host 1 via SSH – ele não deve conseguir.
+7. Verificar se o Host 1 acessa o Host 5 via HTTP, HTTPS e SSH – ele deve conseguir.
+8. Verificar se o Host 5 acessa o Host 3 via HTTP - ele deve conseguir.
+9. Verificar se o Host 5 acessa o Host 3 via HTTPS, Telnet e SSH - ele não deve conseguir.
+10. Verificar se o Host 5 acessa o Host 4 via HTTP e HTTPS - ele deve conseguir.
+11. Verificar se o Host 5 acessa o Host 4 via MYSQL - ele não deve conseguir.
+12. Verificar se o Host 5 acessa o Host 1 via HTTP e HTTPS - ele não deve conseguir.
+13. Verificar se o Host 1 acessa o Firewall via SSH - ele deve conseguir.
+14. Verificar se o Host 1 acessa o Firewall via HTTP, HTTPS e MYSQL - ele não deve conseguir.
+15. Verificar se o Host 4 acessa o Firewall via SSH, Telnet, HTTP, HTTPS e MYSQL - ele não deve conseguir.
+16. Verificar se o Host 5 acessa o Firewall via SSH, Telnet, HTTP, HTTPS e MYSQL - ele não deve conseguir.
+17. Verificar se o Host 5 acessa o Host1 via SSH, Telnet, HTTP, HTTPS e MYSQL - ele não deve conseguir.
+18. Verificar se o Host 3 acessa o Host1 via SSH, Telnet, HTTP, HTTPS e MYSQL - ele não deve conseguir.
 
-Erros que não consegui corrigir:\
 4. host 2 consegue acessar host 3 via ssh, http, mas não consegue via https
 6. host 2 consegue acessar host 1 via ssh.
 
