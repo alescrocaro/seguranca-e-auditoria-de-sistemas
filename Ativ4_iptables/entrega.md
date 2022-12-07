@@ -157,5 +157,7 @@ echo "Limpa tabelas"
 iptables -t nat -F
 iptables -t mangle -F
 iptables -F
+
+echo "Configuracao concluida."
 ```
 
