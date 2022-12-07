@@ -138,7 +138,7 @@ root@Host-1:/$ iperf3 -c 10.10.10.3 -p 443
 root@Host-1:/$ iperf3 -c 10.10.10.3 -p 3306
 ```
 
-# Configuração do Firewall
+# Configuração inicial do Firewall
 ```bash
 # Criacao de seu arquivo de configuracao dentro do diretorio '/etc'
 root@Firewall:/$ mkdir /etc/firewall
@@ -149,6 +149,13 @@ root@Firewall:/etc/firewall$ vi firewall.sh
 root@Firewall:/etc/firewall$ chmod a+x firewall.sh
 ```
 
+# Criando regras do firewall
+```sh
+echo "Iniciando firewall..."
 
-
+echo "Limpa tabelas"
+iptables -t nat -F
+iptables -t mangle -F
+iptables -F
+```
 
