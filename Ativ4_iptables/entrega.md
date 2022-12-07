@@ -163,6 +163,8 @@ iptables -F
 echo "Proibe host1 de acessar servico de HTTP no host4"
 iptables -A FORWARD -s 172.30.0.1 -d 10.10.10.4 -p tcp --dport 80 -j DROP
 
+echo "Impede que qualquer host conectado ao firewall acesse Telnet entre as redes"
+
 echo "Configuracao concluida."
 ```
 
