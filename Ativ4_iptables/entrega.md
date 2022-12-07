@@ -68,3 +68,20 @@ up /usr/bin/iperf3 -s -p 81 -D
 up /usr/bin/iperf3 -s -p 22 -D
 up /usr/bin/iperf3 -s -p 23 -D
 ```
+
+#### Internet:
+Host 5:
+```
+auto eth0
+iface eth0 inet static
+  hwaddress 00:00:00:00:00:05
+  address 192.168.122.5
+  netmask 255.255.255.0
+  gateway 192.168.122.254
+  up echo nameserver 8.8.8.8 > /etc/resolv.conf
+  
+up /usr/bin/iperf3 -s -p 80 -D
+up /usr/bin/iperf3 -s -p 81 -D
+up /usr/bin/iperf3 -s -p 22 -D
+up /usr/bin/iperf3 -s -p 23 -D
+```
