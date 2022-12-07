@@ -151,21 +151,59 @@ root@Firewall:/etc/firewall$ chmod a+x firewall.sh
 
 # Criando regras do firewall
 ```sh
-echo "Iniciando firewall..."
+echo "Iniciando Firewall..."
 
 echo "Limpa tabelas"
 iptables -t nat -F
 iptables -t mangle -F
 iptables -F
 
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
 # politica de liberar tudo eh padrao
+
 
 echo "Proibe host1 de acessar servico de HTTP no host4"
 iptables -A FORWARD -s 172.30.0.1 -d 10.10.10.4 -p tcp --dport 80 -j DROP
 
-echo "Impede que qualquer host conectado ao firewall acesse Telnet entre as redes"
+
+echo "Impede que qualquer host conectado ao firewall acesse telnet entre as redes"
+iptables -A FORWARD -p tcp --dport 23 -j DROP
+
+
+echo "Somente host1 pode acessar firewall via ssh, fora isso ninguem pode acessar nenhum servidor no firewall"
+iptables -A INPUT -s 172.30.0.1 -p tcp --dport 22 -j ACCEPT
+iptables -A INPUT -m state --state NEW -j DROP
+
+
+echo "Somente hosts da LAN podem acessar DMZ via SSH"
+iptables -A FORWARD -i eth1 -o eth2 -p tcp --dport 22 -j ACCEPT
+iptables -A FORWARD -o eth2 -p tcp --dport 22 -j DROP
+
+
+echo "host3 so pode ser acessado como servidor HTTP, de qualquer rede"
+iptables -A FORWARD -d 10.10.10.3 -p tcp --dport 80 -j ACCEPT
+iptables -A FORWARD -d 10.10.10.3 -j DROP
+
+
+echo "host4 so pode ser acessado como servidor HTTP/HTTPS, de qualquer rede"
+iptables -A FORWARD -d 10.10.10.4 -m multiport -p tcp --dport 80,443 -j ACCEPT
+iptables -A FORWARD -d 10.10.10.4 -j DROP
+
+
+echo "DMZ nao pode ser acessada via MYSQL"
+iptables -A FORWARD -o eth2 -p tcp --dport 3306 -j DROP
+
+
+echo "LAN deve ser configurada como host-screened"
+iptables -A FORWARD -o eth1 -m state --state NEW,INVALID  -j DROP
+
 
 echo "Configuracao concluida."
 ```
+
+Erros que não consegui corrigir:\
+4. host 2 consegue acessar host 3 via ssh, http, mas não consegue via https
+6. host 2 consegue acessar host 1 via ssh.
 
 
