@@ -32,12 +32,14 @@ so deve ser acessado para serviços q propoe, como BD
 LAN bastião\
 controla por firewall qm pode acessar as maquinas na rede
 
-- LAN invisivel\
-NAT\
-
-
-- bridge 
-?
+- Hosts e firewalls invisiveis\
+ips estão se esgotando, ficando caro, então tem duas soluções pra isso:
+  - Filtragem bridge:\
+    utiliza camada de enlace, filtra o que passa de um segmento a outro e eh invisivel, ja que n precisa de um ip e 
+    diminui a chance de ser invadido.
+    
+  - NAT:
+    esconde os endereços das máquinas da rede local atrás de um único endereço do roteador para ser roteado na internet
 
 
 - proxy – Muitos Firewalls fazer o serviço de proxy e podem fazer pedidos de conexão em nomes de outros hosts;
