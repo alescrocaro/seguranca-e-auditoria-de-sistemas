@@ -57,6 +57,9 @@ Alterações no pacote antes que ele seja roteado. Isso pode ocorrer em um redir
 echo "Libera/redireciona o acesso de máquinas da internet para a porta 80 do host 3" # redireciona acesso HTTP vindo da internet para o host 3
 iptables -t nat -A PREROUTING -p tcp --dport 80 -i eth0 -j DNAT --to 10.10.10.3 
 ```
+para melhor visualização do trecho acima no pdf:\
+echo "Libera/redireciona o acesso de máquinas da internet para a porta 80 do host 3" # redireciona acesso HTTP vindo da internet para o host 3\
+iptables -t nat -A PREROUTING -p tcp --dport 80 -i eth0 -j DNAT --to 10.10.10.3 
 
 #### POSTROUTING
 Alterações no pacote depois do tratamento de roteamento. Isso pode ocorrer para mascarar os ips da rede local para navegar na internet como no exemplo abaixo.
