@@ -2,12 +2,28 @@ Alexandre Aparecido Scrocaro Junior\
 Atividade 4 - Firewall com iptables
 
 # Introdução
+Nesta atividade foi realizada a configuração de um firewall em um roteador linux em uma rede simulada no software gns3. A rede consiste em uma LAN com faixa de IPs 172.30.0.0/24, uma DMZ (zona desmilitarizada, é uma sub-rede que tem a funcionalidade de fazer uma 'interface' da rede local com a internet) possui faixa de IPs 10.10.10.0/24 e a internet com um host configurado com faixa de IPs 192.168.122.0/24
 
 # Definições
 
 ## Firewall
+Funciona por meio de regras, que ditam o que entra e sai da rede e sua política que também é implementada por meio das regras, mas não analisa o pacote mais profundamente - o que deve ser feito pelo switch. É utilizado para isolar a rede de um ambiente hostil, como a internet.
 
-## iptables
+Tem dois tipos de política:
+- Liberar tudo:\
+  Tudo que não é bloqueado por meio das regras será liberado.
+
+- Bloquear tudo:\
+  Bloqueia tudo que não é liberado por meio de regras.\
+  Tende a ser mais seguro.
+  
+Projetos de firewall:
+- Host screened:\
+- Host bastion:\
+- Demilitarized zone (DMZ):\
+- 
+
+## Iptables
 
 ## Tabelas
 
