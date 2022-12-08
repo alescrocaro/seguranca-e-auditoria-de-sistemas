@@ -19,23 +19,60 @@ Tem dois tipos de política:
   
 Projetos de firewall:
 - Host screened:\
+Não pode ser acessado como servidor.
+
 - Host bastion:\
+Pode ser acessado como servidor, mas somente para os serviços que ele propõe.
+
 - Demilitarized zone (DMZ):\
-- 
+Serve como uma espécie de interface da rede com a internet, é uma sub-rede que controla alguns serviços como servidor HTTP.
 
 ## Iptables
+É o firewall do linux. Utilizado para configurar as regras do firewall, filtra serviços. Possui módulos como o `state` que controla conexões, `multiport` que permite a utilização de várias portas (protolos) na mesma regra ou `tcp-flags` que controla as flags SYN,ACK dos serviços que usam tcp.
 
 ## Tabelas
 
 ### Filter
-resumo
-#### Situação1
+Tabela do netfilter, filtra pacotes.
+
+#### INPUT
+Quando o firewall é o destino final do pacote.
+
+#### OUTPUT
+Quando o firewall é a origem do pacote.
+
+#### FORWARD
+Quando o firewall não é o destino final nem a origem, o pacote apenas passa por ele.
+
 
 ### Nat
+Implementa funções de NAT.
+
+#### OUTPUT
+Quando o firewall é a origem do pacote.
+
+#### PREROUTING
+Alterações no pacote antes que ele seja roteado. Isso pode ocorrer em um redirecionamento como no exemplo abaixo.
+```sh
+echo "Libera/redireciona o acesso de máquinas da internet para a porta 80 do host 3" # redireciona acesso HTTP vindo da internet para o host 3
+iptables -t nat -A PREROUTING -p tcp --dport 80 -i eth0 -j DNAT --to 10.10.10.3 
+```
+
+#### POSTROUTING
+Alterações no pacote depois do tratamento de roteamento. Isso pode ocorrer para mascarar os ips da rede local para navegar na internet como no exemplo abaixo.
+```sh
+echo "Mascaramento"
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE 
+```
 
 ### Mangle
+Alterações especiais mais complexas em pacotes, como alterar a prioridade de entrada e saída de dele baseado no tipo de serviço que se destinava.
 
+#### OUTPUT
+Quando o firewall é a origem do pacote. Altera pacotes de forma especial antes que sejam roteados.
 
+#### PREROUTING
+Alterações no pacote antes que ele seja roteado.
 
 # Cenário
 
@@ -387,4 +424,8 @@ Nao acessa via nenhum:\
 Não consegue por conta da regra I.\
 Nao acessa via nenhum:\
 ![image](https://user-images.githubusercontent.com/37521313/206324820-1745c219-274e-4037-ab32-f96d89e5948a.png)
+
+
+# Referências
+Slides do professor Luiz Arthur Feitosa dos Santos, contidos no moodle da matéria.
 
