@@ -54,12 +54,10 @@ Quando o firewall é a origem do pacote.
 #### PREROUTING
 Alterações no pacote antes que ele seja roteado. Isso pode ocorrer em um redirecionamento como no exemplo abaixo.
 ```sh
-echo "Libera/redireciona o acesso de máquinas da internet para a porta 80 do host 3" # redireciona acesso HTTP vindo da internet para o host 3
+# redireciona acesso HTTP vindo da internet para o host 3
+echo "Libera/redireciona o acesso de máquinas da internet para a porta 80 do host 3" 
 iptables -t nat -A PREROUTING -p tcp --dport 80 -i eth0 -j DNAT --to 10.10.10.3 
 ```
-para melhor visualização do trecho acima no pdf:\
-echo "Libera/redireciona o acesso de máquinas da internet para a porta 80 do host 3" # redireciona acesso HTTP vindo da internet para o host 3\
-iptables -t nat -A PREROUTING -p tcp --dport 80 -i eth0 -j DNAT --to 10.10.10.3 
 
 #### POSTROUTING
 Alterações no pacote depois do tratamento de roteamento. Isso pode ocorrer para mascarar os ips da rede local para navegar na internet como no exemplo abaixo.
@@ -256,11 +254,13 @@ echo "Proibe host1 de acessar servico de HTTP no host4"
 iptables -A FORWARD -s 172.30.0.1 -d 10.10.10.4 -p tcp --dport 80 -j DROP
 
 
-echo "Impede que qualquer host conectado ao firewall acesse telnet entre as redes"
+echo "Impede que qualquer host conectado ao firewall acesse telnet entre
+as redes"
 iptables -A FORWARD -p tcp --dport 23 -j DROP
 
 
-echo "Somente host1 pode acessar firewall via ssh, fora isso ninguem pode acessar nenhum servidor no firewall"
+echo "Somente host1 pode acessar firewall via ssh, fora isso ninguem pode 
+acessar nenhum servidor no firewall"
 iptables -A INPUT -s 172.30.0.1 -p tcp --dport 22 -j ACCEPT
 iptables -A INPUT -m state --state NEW,INVALID -j DROP
 
