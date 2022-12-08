@@ -173,6 +173,16 @@ root@Firewall:/etc/firewall$ chmod a+x firewall.sh
 ```
 
 ## Criando regras do firewall
+A: Com a política de liberar tudo em todas as situações.\
+B: Proibir que o Host 1 acesse o serviço de HTTP no Host 4.\
+C: Impedir que qualquer host conectado ao firewall acesse Telnet entre as redes.\
+D: Somente o Host 1 pode acessar o firewall via SSH, fora isso ninguém deve acessar nenhum servidor no Firewall.\
+E: Somente os hosts da LAN pode acessar a DMZ via SSH.\
+F: O Host 3 só pode ser acessado como servidor HTTP, de qualquer rede.\
+G: O Host 4 só pode ser acessado como servidor HTTP/HTTPS, de qualquer rede.\
+H: A DMZ não pode ser acessada via MYSQL.\
+I: A LAN deve ser configurada como LAN Screened.
+
 ```sh
 echo "Iniciando Firewall..."
 
@@ -226,25 +236,133 @@ echo "Configuracao concluida."
 ```
 ## Testes
 1. Verificar se o Host 1 acessa o Host 3 via HTTP – ele deve conseguir.
+
+Consegue por conta da regra F.\
+![image](https://user-images.githubusercontent.com/37521313/206322187-e7118abb-baf7-4c4b-9989-1635c74234fe.png)
+
 2. Verificar se o Host 1 acessa o Host 4 via HTTP – ele não deve conseguir.
+
+Não consegue por conta da regra B.\
+![image](https://user-images.githubusercontent.com/37521313/206322231-03fe52d1-4c19-47f3-b18d-74d7d6921990.png)
+
 3. Verificar se o Host 1 acessa o Host 4 via HTTPS – ele deve conseguir.
+
+Consegue por conta da regra G.\
+![image](https://user-images.githubusercontent.com/37521313/206322302-6a713c6e-6f66-4fd0-b4ea-b200c9c993ff.png)
+
 4. Verificar se o Host 2 acessa o Host 3 via HTTP, HTTPS e SSH – ele não deve conseguir.
+
+Consegue por conta da regra F.\
+Acessa via HTTP:\
+![image](https://user-images.githubusercontent.com/37521313/206322378-8a31e77d-1b3b-4532-84aa-54d27ef9a034.png)
+
+Não consegue por conta da regra F.\
+Não acessa via HTTPS:\
+![image](https://user-images.githubusercontent.com/37521313/206322512-31b9b3c2-876d-40dd-9c81-886604b261aa.png)
+
+Consegue por conta da regra E.\
+Acessa via SSH:\
+![image](https://user-images.githubusercontent.com/37521313/206322553-e14e2d51-cd21-47ee-aaf3-abb3fc499cb2.png)
+
 5. Verificar se o Host 2 acessa o Host 5 via SSH – ele deve conseguir.
+
+Consegue por que nada o impede (politica de ACCEPT).\
+![image](https://user-images.githubusercontent.com/37521313/206322599-5ffb6322-f9f8-4dad-9615-ba19ac0d307c.png)
+
 6. Verificar se o Host 2 acessa o Host 1 via SSH – ele não deve conseguir.
+
+Consegue por que nada o impede (politica de ACCEPT).\
+Acessa via SSH:\
+![image](https://user-images.githubusercontent.com/37521313/206322663-90a75852-90b0-443d-9421-49449c6ce9e1.png)
+
 7. Verificar se o Host 1 acessa o Host 5 via HTTP, HTTPS e SSH – ele deve conseguir.
+
+Consegue por que nada o impede (politica de ACCEPT).\
+Acessa via HTTP:\
+![image](https://user-images.githubusercontent.com/37521313/206322810-4c538d46-d878-4fd2-b4db-33393d7597f3.png)
+
+Acessa via HTTPS:\
+![image](https://user-images.githubusercontent.com/37521313/206322983-dec662d0-9f86-45df-8d23-ea5da6496418.png)
+
+Acessa via SSH:\
+![image](https://user-images.githubusercontent.com/37521313/206323013-e5901dce-870b-4ba9-b24a-809558575009.png)
+
 8. Verificar se o Host 5 acessa o Host 3 via HTTP - ele deve conseguir.
+
+Consegue por que nada o impede (politica de ACCEPT).\
+![image](https://user-images.githubusercontent.com/37521313/206323091-bfdd438f-ee77-464d-8b29-17c3a979a9d7.png)
+
 9. Verificar se o Host 5 acessa o Host 3 via HTTPS, Telnet e SSH - ele não deve conseguir.
+
+Não consegue por conta da regra F.\
+Nao acessa via HTTPS:\
+![image](https://user-images.githubusercontent.com/37521313/206323144-e18e38d9-0331-455e-91bc-67afeded45d8.png)
+
+Nao acessa via Telnet:\
+![image](https://user-images.githubusercontent.com/37521313/206323217-5a604fcc-e892-4d9a-aedc-2d0f19909544.png)
+
+Nao acessa via SSH:\
+![image](https://user-images.githubusercontent.com/37521313/206323249-560fbaf6-f131-4d12-8791-8e2d73fdc0b2.png)
+
 10. Verificar se o Host 5 acessa o Host 4 via HTTP e HTTPS - ele deve conseguir.
+
+Consegue por que nada o impede (politica de ACCEPT) + regra G.\
+Acessa via HTTP:\
+![image](https://user-images.githubusercontent.com/37521313/206323302-5092b894-cd8e-4fc4-8eea-2c108c453d85.png)
+
+Acessa via HTTPS:\
+![image](https://user-images.githubusercontent.com/37521313/206323344-c4a9d819-031b-4ffc-9266-7818464affae.png)
+
 11. Verificar se o Host 5 acessa o Host 4 via MYSQL - ele não deve conseguir.
+
+Não consegue por conta da regra H.\
+![image](https://user-images.githubusercontent.com/37521313/206323378-37ad4967-4181-451d-8213-66078198a482.png)
+
 12. Verificar se o Host 5 acessa o Host 1 via HTTP e HTTPS - ele não deve conseguir.
+
+Não consegue por conta da regra H.\
+Nao acessa via HTTP:\
+![image](https://user-images.githubusercontent.com/37521313/206323547-fa2c734c-2a32-49bd-bfbd-da2b83b69cd7.png)
+
+Nao acessa via HTTPS:\
+![image](https://user-images.githubusercontent.com/37521313/206323593-98028c70-bbb7-4fd4-9a04-6badacf99a3d.png)
+
 13. Verificar se o Host 1 acessa o Firewall via SSH - ele deve conseguir.
+
+![image](https://user-images.githubusercontent.com/37521313/206323752-0da40108-bdd5-46a2-a069-105239cd20cd.png)
+
+![image](https://user-images.githubusercontent.com/37521313/206323795-4613c63f-a903-4598-aa56-4c4e19dc8aea.png)
+
+![image](https://user-images.githubusercontent.com/37521313/206323834-31c37d33-83a2-44b9-9299-27b0c50bd7a0.png)
+
 14. Verificar se o Host 1 acessa o Firewall via HTTP, HTTPS e MYSQL - ele não deve conseguir.
+
+Nao acessa via HTTP:\
+![image](https://user-images.githubusercontent.com/37521313/206323935-7efe238a-88b6-4e85-9789-297fc29e6145.png)
+
+Nao acessa via HTTPS:\
+![image](https://user-images.githubusercontent.com/37521313/206324021-24390161-b044-4fa0-8edc-f07c972253a7.png)
+
+Nao acessa via MYSQL:\
+![image](https://user-images.githubusercontent.com/37521313/206324061-83b5c9ac-d3dd-4423-a914-7768d4b12a10.png)
+
 15. Verificar se o Host 4 acessa o Firewall via SSH, Telnet, HTTP, HTTPS e MYSQL - ele não deve conseguir.
+
+Nao acessa via nenhum:\
+![image](https://user-images.githubusercontent.com/37521313/206324429-c23324c6-06a3-4e18-b0de-69fb55aad0aa.png)
+
 16. Verificar se o Host 5 acessa o Firewall via SSH, Telnet, HTTP, HTTPS e MYSQL - ele não deve conseguir.
+
+Nao acessa via nenhum:\
+![image](https://user-images.githubusercontent.com/37521313/206324573-ab8ba293-f50e-4f45-837a-6be9f7e917d6.png)
+
 17. Verificar se o Host 5 acessa o Host1 via SSH, Telnet, HTTP, HTTPS e MYSQL - ele não deve conseguir.
+
+Nao acessa via nenhum:\
+![image](https://user-images.githubusercontent.com/37521313/206324748-bf7115ec-549d-435f-bba3-afd293a07e24.png)
+
 18. Verificar se o Host 3 acessa o Host1 via SSH, Telnet, HTTP, HTTPS e MYSQL - ele não deve conseguir.
 
-4. host 2 consegue acessar host 3 via ssh, http, mas não consegue via https
-6. host 2 consegue acessar host 1 via ssh.
-
+Nao acessa via nenhum:\
+![image](https://user-images.githubusercontent.com/37521313/206324820-1745c219-274e-4037-ab32-f96d89e5948a.png)
 
