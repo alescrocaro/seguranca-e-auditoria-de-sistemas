@@ -60,6 +60,12 @@ pra acessar serviço bloqueado - telegram - pode se usar vpn e ela eh utilizada 
 proxy pode ser usado para monitorar usuários (utfpr p exemplo)\
 vpn o pacote original ta dentro, encapsulado, do pacote novo gerado
 
+## Sondagens
+chava simetrica +-= chave unica\
+tecnica fundamental eh o tunelamento\
+em vpn o termo virtual existe pois essa tecnica depende de uma conexao temporaria, dessa forma utiliza-se o conceito de tunelamento p enviar pacotes de redes privadas por meio de redes publicas
+
+
 
 
 # IDS
