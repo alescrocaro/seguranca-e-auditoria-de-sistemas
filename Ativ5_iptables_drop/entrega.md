@@ -122,13 +122,13 @@ up /usr/bin/iperf3 -s -p 22 -D
 ```
 
 ## Criando regras do firewall
-a) Com a política de bloquear tudo em todas as situações.
-b) A LAN deve ser uma LAN screened. A LAN pode acessar qualquer serviço.
-c) O Host 3 na DMZ deve ser apenas um servidor HTTP, para qualquer rede.
-d) O Host 4 na DMZ deve ser um servidor HTTPS e MYSQL, para qualquer rede.
-e) Os Hosts da DMZ, bem como o firewall, só podem ser clientes: DNS, HTTP e HTTPS.
-f) O Host 1 pode acessar o firewall via SSH, mas isso deve ser controlado por MAC.
-g) Qualquer host da LAN pode acessar os hosts da DMZ via SSH.
+a) Com a política de bloquear tudo em todas as situações.\
+b) A LAN deve ser uma LAN screened. A LAN pode acessar qualquer serviço.\
+c) O Host 3 na DMZ deve ser apenas um servidor HTTP, para qualquer rede.\
+d) O Host 4 na DMZ deve ser um servidor HTTPS e MYSQL, para qualquer rede.\
+e) Os Hosts da DMZ, bem como o firewall, só podem ser clientes: DNS, HTTP e HTTPS.\
+f) O Host 1 pode acessar o firewall via SSH, mas isso deve ser controlado por MAC.\
+g) Qualquer host da LAN pode acessar os hosts da DMZ via SSH.\
 h) Atenção, tudo deve ser controlado com o módulo state do iptables.
 
 ```sh
