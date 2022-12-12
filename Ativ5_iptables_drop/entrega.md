@@ -152,12 +152,9 @@ iptables -P FORWARD DROP
 
 
 
-echo "LAN screened"
-iptables -A FORWARD -o eth1 -m state --state NEW,INVALID -j DROP
-
-echo "LAN pode acessar qualquer servico"
-#iptables -A FORWARD -i eth1 -j ACCEPT
-#iptables -A FORWARD -o eth1 -j ACCEPT
+echo "LAN screened, LAN pode acessar qualquer servico"
+iptables -A FORWARD -i eth1 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+iptables -A FORWARD -o eth1 -m state --state ESTABLISHED,RELATED -j ACCEPT
 
 
 
