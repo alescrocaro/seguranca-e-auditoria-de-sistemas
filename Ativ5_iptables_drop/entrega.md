@@ -8,7 +8,7 @@ Host 1:
 ```
 auto eth0
 iface eth0 inet static
-  hwaddress 00:00:00:00:00:01
+  hwaddress ether 00:00:00:00:00:01
   address 172.30.0.1
   netmask 255.255.255.0
   gateway 172.30.0.254
@@ -25,7 +25,7 @@ Host 2:
 ```
 auto eth0
 iface eth0 inet static
-  hwaddress 00:00:00:00:00:02
+  hwaddress ether 00:00:00:00:00:02
   address 172.30.0.2
   netmask 255.255.255.0
   gateway 172.30.0.254
@@ -43,7 +43,7 @@ Host 3:
 ```
 auto eth0
 iface eth0 inet static
-  hwaddress 00:00:00:00:00:03
+  hwaddress ether 00:00:00:00:00:03
   address 10.10.10.3
   netmask 255.255.255.0
   gateway 10.10.10.254
@@ -60,7 +60,7 @@ Host 4:
 ```
 auto eth0
 iface eth0 inet static
-  hwaddress 00:00:00:00:00:04
+  hwaddress ether 00:00:00:00:00:04
   address 10.10.10.4
   netmask 255.255.255.0
   gateway 10.10.10.254
@@ -78,7 +78,7 @@ Host 5:
 ```
 auto eth0
 iface eth0 inet static
-  hwaddress 00:00:00:00:00:05
+  hwaddress ether 00:00:00:00:00:05
   address 192.168.122.5
   netmask 255.255.255.0
   gateway 192.168.122.254
@@ -95,7 +95,7 @@ up /usr/bin/iperf3 -s -p 22 -D
 ```
 auto eth0
 iface eth0 inet static
-  hwaddress 00:00:00:00:01:01
+  hwaddress ether 00:00:00:00:01:01
   address 192.168.122.254
   netmask 255.255.255.0
   gateway 192.168.122.1
@@ -103,13 +103,13 @@ iface eth0 inet static
   
 auto eth1
 iface eth1 inet static
-  hwaddress 00:00:00:00:01:02
+  hwaddress ether 00:00:00:00:01:02
   address 172.30.0.254
   netmask 255.255.255.0
   
 auto eth2
 iface eth2 inet static
-  hwaddress 00:00:00:00:01:03
+  hwaddress ether 00:00:00:00:01:03
   address 10.10.10.254
   netmask 255.255.255.0
   
