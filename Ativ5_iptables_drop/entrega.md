@@ -134,16 +134,24 @@ h) Atenção, tudo deve ser controlado com o módulo state do iptables.
 ```sh
 echo "Iniciando firewall"
 
+
+
 echo "LIMPANDO TABELAS"
 iptables -F
 iptables -t nat -F
 iptables -t mangle -F
 
+
+
 echo "HABILITAR ROTEAMENTO"
 echo 1 > /proc/sys/net/ipv4/ip_forward
 
+
+
 echo "MASCARAMENTO"
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+
 
 echo "POLITICA DE DROP"
 iptables -P INPUT DROP
@@ -152,15 +160,9 @@ iptables -P FORWARD DROP
 
 
 
-echo "LAN screened, LAN pode acessar qualquer servico"
-iptables -A FORWARD -i eth1 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
-iptables -A FORWARD -o eth1 -m state --state ESTABLISHED,RELATED -j ACCEPT
-
-
-
 echo "HOST 3 eh apenas servidor HTTP pra qualquer rede"
-iptables -A FORWARD -p tcp --dport 80 -o eth2 -d 10.10.10.3 -j ACCEPT
-iptables -A FORWARD -p tcp --sport 80 -s 10.10.10.3 -j ACCEPT
+iptables -A FORWARD -p tcp --dport 80 -o eth2 -d 10.10.10.3 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+iptables -A FORWARD -p tcp --sport 80 -s 10.10.10.3 -m state --state ESTABLISHED,RELATED -j ACCEPT
 
 
 
@@ -171,23 +173,31 @@ iptables -A FORWARD -m multiport -p tcp --sport 443,3306 -s 10.10.10.4 -j ACCEPT
 
 
 echo "HOSTS da DMZ e FIREWALL soh podem ser clientes DNS, HTTP e HTTPS"
-iptables -A FORWARD -m multiport -p tcp --dport 80,443 -i eth2 -j ACCEPT
-iptables -A FORWARD -m multiport -p tcp --sport 80,443 -o eth2 -j ACCEPT
+iptables -A FORWARD -m multiport -p tcp --dport 80,443 -i eth2 -o eth0 -j ACCEPT
+iptables -A FORWARD -m multiport -p tcp --sport 80,443 -i eth0 -o eth2 -j ACCEPT
 
 iptables -A FORWARD -p udp --dport 53 -i eth2 -j ACCEPT
 iptables -A FORWARD -p udp --sport 53 -o eth2 -j ACCEPT
 
-iptables -A OUTPUT -m multiport -p tcp --dport 80,443 -j ACCEPT
-iptables -A INPUT -m multiport -p tcp --sport 80,443 -j ACCEPT 
+iptables -A OUTPUT -o eth0 -m  multiport -p tcp --dport 80,443 -j ACCEPT
+iptables -A INPUT -i eth0 -m multiport -p tcp --sport 80,443 -j ACCEPT
 
-iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
-iptables -A INPUT -p udp --sport 53 -j ACCEPT
+iptables -A OUTPUT -o eth0 -p udp --dport 53 -j ACCEPT
+iptables -A INPUT -i eth0 -p udp --sport 53 -j ACCEPT
 
 
 
 echo "HOST 1 pode acessar firewall via ssh, mas controlado por MAC"
 iptables -A INPUT -p tcp --dport 22 -i eth1 -m mac --mac-source 00:00:00:00:00:01 -j ACCEPT
-iptables -A OUTPUT -p tcp --sport 22 -o eth1 -j ACCEPT 
+iptables -A OUTPUT -p tcp --sport 22 -o eth1 -j ACCEPT
+
+
+
+echo "LAN screened, LAN pode acessar qualquer servico"
+iptables -A FORWARD -i eth1 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+iptables -A FORWARD -i eth0 -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+
 
 echo "Configuracao concluida."
 ```
