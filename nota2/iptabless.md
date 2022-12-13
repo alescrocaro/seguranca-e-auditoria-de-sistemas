@@ -33,3 +33,11 @@ não especifica porta do lado do cliente (porta de origem é alta e aleatória)
 
 
 ## MANGLE
+
+
+
+
+## Regras 
+
+![image](https://user-images.githubusercontent.com/37521313/207440324-9153995f-187d-47d8-9580-509ecd6f4021.png)
+
