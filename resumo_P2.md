@@ -205,7 +205,8 @@ so deve ser acessado para serviços q propoe, como BD
 
 - demilitarized zone - DMZ - zona desmilitarizada
 LAN bastião\
-controla por firewall qm pode acessar as maquinas na rede
+controla por firewall qm pode acessar as maquinas na rede\
+se isola das outras LANs da rede, para prover mais segurança 
 
 - Hosts e firewalls invisiveis\
 ips estão se esgotando, ficando caro, então tem duas soluções pra isso:
@@ -234,12 +235,19 @@ ips estão se esgotando, ficando caro, então tem duas soluções pra isso:
                     
 Mas uma coisa é certa o uso de Firewalls é indispensável para qualquer rede de computadores.
 
+**sondagems:**
 
+firewall de filtro de pacote ta na camada de transporte
 
-
+firewall pode fazer outras funcoes como: balanceamento de carga, QoS e NAT
 
 # iptables
 
+**PROVA**:\
+TRADUÇÃO DE REGRAS
 
 
+para validar a regra, também é necessário fazer o caminho de volta do pacote
 
+
+não especifica porta do lado do cliente (porta de origem é alta e aleatória) A NAO SER NA VOLTA
