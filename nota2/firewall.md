@@ -1,16 +1,20 @@
 # Firewall
-diferença para o switch:
+diferença para o switch:\
 firewall filtra rapidamente tudo que vem na rede e bloqueia ou libera, se algo é preciso ser
-analisado mais a fundo, como analisar um detalhe de um pacote, deve-se utilizar switch\
-isola a rede de um ambiente hostil (internet).\
-composto por regras que ditam o que entra e sai e políticas q eh implantada por meio de regras\
-não impede de pegar virus\
+analisado mais a fundo, como analisar um detalhe de um pacote, deve-se utilizar switch
 
 
-controla o q entra e sai da rede\
+isola a rede de um ambiente hostil (internet).
+
+composto por regras que ditam o que entra e sai e políticas q eh implantada por meio de regras
+
+não impede de pegar virus
+
+
+controla o q entra e sai da rede
 
 2 tipos de politica
-- liberar tudo\
+- liberar tudo
 tudo que não está bloqueado é liberado\
 cria regra de bloqueios
 
